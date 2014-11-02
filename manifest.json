@@ -1,0 +1,16 @@
+{
+  "name": "Hello World!",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": [
+      "js/background.js",
+      "js/vendor/angular.min.js",
+      "js/vendor/angular-route.min.js"
+      ]
+    }
+  },
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
