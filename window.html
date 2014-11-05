@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html data-ng-app="mathApp" data-ng-csp="">
-  <head>
-  </head>
-  <body>
-  	<script src="./js/vendor/angular.min.js"></script>
-    <!-- <script src="./js/vendor/angular-route.min.js"></script> -->
-    <script src="./js/app.js"></script>
-    <div>Hello, world!</div>
-    <div class="container" data-ng-controller="WindowController as window">
-    	<a data-ng-click="window.change()">{{window.text}}</a>
-    </div>
-  </body>
+<head>
+<link rel="stylesheet" type="text/css" href="css/angular-csp.css" />
+</head>
+<body>
+	<script src="./js/vendor/angular.min.js"></script>
+	<!-- <script src="./js/vendor/angular-route.min.js"></script> -->
+	<script src="./js/app.js"></script>
+	<div>Hello, world!</div>
+	<div class="container" data-ng-controller="WindowController as window">
+		<a data-ng-click="window.change()">{{window.text}}</a>
+		<ul>
+			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(1)">Add</a></li>
+			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(2)">Subtract</a></li>
+			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(3)">Multiply</a></li>
+			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(4)">Divide</a></li>
+			<li data-ng-show="window.getMain()"><a data-ng-click="window.setMain()">Main Menu</a></li>
+		</ul>
+	</div>
+</body>
 </html>
