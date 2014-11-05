@@ -2,21 +2,60 @@
 <html data-ng-app="mathApp" data-ng-csp="">
 <head>
 <link rel="stylesheet" type="text/css" href="css/angular-csp.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 	<script src="./js/vendor/angular.min.js"></script>
-	<!-- <script src="./js/vendor/angular-route.min.js"></script> -->
+	<script src="./js/vendor/angular-route.min.js"></script>
 	<script src="./js/app.js"></script>
 	<div>Hello, world!</div>
-	<div class="container" data-ng-controller="WindowController as window">
+	<div data-ng-controller="WindowController as window">
 		<a data-ng-click="window.change()">{{window.text}}</a>
 		<ul>
-			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(1)">Add</a></li>
-			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(2)">Subtract</a></li>
-			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(3)">Multiply</a></li>
-			<li data-ng-show="window.getUMain()"><a data-ng-click="window.setType(4)">Divide</a></li>
-			<li data-ng-show="window.getMain()"><a data-ng-click="window.setMain()">Main Menu</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(1)">Add</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(2)">Subtract</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(3)">Multiply</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(4)">Divide</a></li>
+			<li data-ng-show="window.getMain()"><a
+				data-ng-click="window.setMain()">Main Menu</a></li>
 		</ul>
+		<div class="container">
+			<div class="box">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+			<div class="box">7</div>
+			<div class="box">8</div>
+			<div class="box">9</div>
+		</div>
+		<div class="container"></div>
+		<div class="container">
+			<div class="operator">
+				<div class="box">+</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="container">
+			<div class="box">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+			<div class="box">7</div>
+			<div class="box">8</div>
+			<div class="box">9</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="container">
+			<div id="result">3</div>
+			<div id="result">4</div>
+			<div id="result">5</div>
+			<div id="result">6</div>
+			<div id="result">7</div>
+			<div id="result">8</div>
+			<div id="result">9</div>
+		</div>
 	</div>
 </body>
 </html>
