@@ -10,6 +10,7 @@
 		this.result = 0;
 		this.num1arr = new Array(6);
 		this.num2arr = new Array(6);
+		this.operator = "";
 
 		this.change = function() {
 			this.text = "New Text";
@@ -32,10 +33,12 @@
 			this.generateNum();
 			if (type == 1) {
 				this.result = this.num1 + this.num2;
+				this.operator = '+';
 			}
 			
 			else if (type == 2) {
 				this.result = this.num1 - this.num2;
+				this.operator = '-';
 			}
 			
 			else if (type == 3) {
@@ -44,9 +47,11 @@
 					this.generateNum();
 					this.result = this.num1 * this.num2;
 				}
+				this.operator = 'X';
 			}
 			else {
 				this.result = this.num1/ this.num2;
+				this.operator = '/';
 			}
 			
 			i = 0;
@@ -67,12 +72,12 @@
 			}
 		};
 		
-		this.generateNum = function() {
-			a = Math.floor(Math.random() * (100000 - 1)) + 1;
-			b = Math.floor(Math.random() * (100000 - 1)) + 1;
-			console.log ("A : " + a);
-			console.log("B : " + b);
+		this.generateNum = function(max, min) {
+			a = Math.floor(Math.random() * ((max | 100000) - (min | 1))) + 1;
+			b = Math.floor(Math.random() * ((max | 100000) - (min | 1))) + 1;
 			this.num1 = a>b?a:b;
 			this.num2 = a<b?a:b;
+			console.log ("A : " + this.num1);
+			console.log("B : " + this.num2);
 		}
 	});
