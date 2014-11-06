@@ -23,38 +23,40 @@
 			<li data-ng-show="window.getMain()"><a
 				data-ng-click="window.setMain()">Main Menu</a></li>
 		</ul>
-		<div class="container">
-			<div class="box">4</div>
-			<div class="box">5</div>
-			<div class="box">6</div>
-			<div class="box">7</div>
-			<div class="box">8</div>
-			<div class="box">9</div>
-		</div>
-		<div class="container"></div>
-		<div class="container">
-			<div class="operator">
-				<div class="box">+</div>
+		<div data-ng-show="window.getMain()">
+			<div class="container">
+				<div class="box">{{window.num1arr[0]}}</div>
+				<div class="box">{{window.num1arr[1]}}</div>
+				<div class="box">{{window.num1arr[2]}}</div>
+				<div class="box">{{window.num1arr[3]}}</div>
+				<div class="box">{{window.num1arr[4]}}</div>
+				<div class="box">{{window.num1arr[5]}}</div>
 			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="container">
-			<div class="box">4</div>
-			<div class="box">5</div>
-			<div class="box">6</div>
-			<div class="box">7</div>
-			<div class="box">8</div>
-			<div class="box">9</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="container">
-			<div id="result">3</div>
-			<div id="result">4</div>
-			<div id="result">5</div>
-			<div id="result">6</div>
-			<div id="result">7</div>
-			<div id="result">8</div>
-			<div id="result">9</div>
+			<div class="container"></div>
+			<div class="container">
+				<div class="operator">
+					<div class="box">+</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container">
+				<div class="box">{{window.num2arr[0]}}</div>
+				<div class="box">{{window.num2arr[1]}}</div>
+				<div class="box">{{window.num2arr[2]}}</div>
+				<div class="box">{{window.num2arr[3]}}</div>
+				<div class="box">{{window.num2arr[4]}}</div>
+				<div class="box">{{window.num2arr[5]}}</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container">
+				<div id="result"><input type="text" data-ng-model="window.userin[0]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[1]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[2]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[3]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[4]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[5]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[6]" /></div>
+			</div>
 		</div>
 	</div>
 </body>
