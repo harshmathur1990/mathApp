@@ -106,10 +106,10 @@ app.controller('WindowController', function() {
 		}
 		console.log("Given Answer : " + this.userAns + "   Remainder : " + this.userRem);
 		if (this.userAns == this.result) {
+			this.opStatus = "Correct Answer!";
 			if (this.isDiv() && this.userRem != this.remainder) {
 				this.opStatus = "Wrong Answer!";
 			}
-			this.opStatus = "Correct Answer!";
 		}
 		else {
 			this.opStatus = "Wrong Answer!";
