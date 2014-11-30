@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html data-ng-app="mathApp" data-ng-csp="">
-  <head>
-  </head>
-  <body>
-  	<script src="./js/vendor/angular.min.js"></script>
-    <!-- <script src="./js/vendor/angular-route.min.js"></script> -->
-    <script src="./js/app.js"></script>
-    <div>Hello, world!</div>
-    <div class="container" data-ng-controller="WindowController as window">
-    	<a data-ng-click="window.change()">{{window.text}}</a>
-    </div>
-  </body>
+<head>
+<link rel="stylesheet" type="text/css" href="css/angular-csp.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<script src="./js/vendor/angular.min.js"></script>
+	<script src="./js/vendor/angular-route.min.js"></script>
+	<script src="./js/app.js"></script>
+	<div>Hello, world!</div>
+	<div data-ng-controller="WindowController as window">
+		<a data-ng-click="window.change()">{{window.text}}</a>
+		<ul>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(1)">Add</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(2)">Subtract</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(3)">Multiply</a></li>
+			<li data-ng-show="window.getUMain()"><a
+				data-ng-click="window.setType(4)">Divide</a></li>
+			<li data-ng-show="window.getMain()"><a
+				data-ng-click="window.setMain()">Main Menu</a></li>
+		</ul>
+		<div data-ng-show="window.getMain()">
+			<div class="container">
+				<div class="box">{{window.num1arr[0]}}</div>
+				<div class="box">{{window.num1arr[1]}}</div>
+				<div class="box">{{window.num1arr[2]}}</div>
+				<div class="box">{{window.num1arr[3]}}</div>
+				<div class="box">{{window.num1arr[4]}}</div>
+				<div class="box">{{window.num1arr[5]}}</div>
+			</div>
+			<div class="container"></div>
+			<div class="container">
+				<div class="operator">
+					<div class="box">{{window.operator}}</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container">
+				<div class="box">{{window.num2arr[0]}}</div>
+				<div class="box">{{window.num2arr[1]}}</div>
+				<div class="box">{{window.num2arr[2]}}</div>
+				<div class="box">{{window.num2arr[3]}}</div>
+				<div class="box">{{window.num2arr[4]}}</div>
+				<div class="box">{{window.num2arr[5]}}</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container">
+				<div id="result"><input type="text" data-ng-model="window.userin[0]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[1]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[2]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[3]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[4]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[5]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.userin[6]" /></div>
+			</div>
+			<div class="clearfix"></div>
+			<div data-ng-show="window.isDiv()" class="container">
+				<div id="result"><input type="text" data-ng-model="window.rem[0]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.rem[1]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.rem[2]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.rem[3]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.rem[4]" /></div>
+				<div id="result"><input type="text" data-ng-model="window.rem[5]" /></div>
+				<div id="result"><input type="text" value="R" /></div>
+			</div>
+			<div><a data-ng-click="window.checkAnswer()">Check Answer</a>
+			{{window.opStatus}}</div>
+		</div>
+	</div>
+</body>
 </html>
